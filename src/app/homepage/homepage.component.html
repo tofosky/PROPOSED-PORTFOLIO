@@ -1,0 +1,83 @@
+<!-- Header Section -->
+<header class="bg-white shadow-sm">
+  <nav class="bg-white shadow fixed w-full z-20 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="assets/logo.png" alt="Logo" class="h-8 w-auto" />
+        <span class="ml-2 text-xl font-semibold">PRUNEDGE</span>
+      </div>
+
+      <!-- Navigation Menu for Desktop -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Services</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Products</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Insights</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Careers</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Contact Us</a>
+      </div>
+
+      <!-- Get in Touch Button -->
+      <button
+        class="hidden md:block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        Get in touch
+      </button>
+
+      <!-- Hamburger Menu Button for Mobile -->
+      <button (click)="toggleMenu()" class="md:hidden text-gray-600">
+        <svg
+          *ngIf="!isMenuOpen"
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+        <svg
+          *ngIf="isMenuOpen"
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      *ngIf="isMenuOpen"
+      class="md:hidden mt-4 bg-gray-100 p-4 flex flex-col space-y-4"
+    >
+      <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+      <a href="#" class="text-gray-700 hover:text-blue-500">Services</a>
+      <a href="#" class="text-gray-700 hover:text-blue-500">Products</a>
+      <a href="#" class="text-gray-700 hover:text-blue-500">Insights</a>
+      <a href="#" class="text-gray-700 hover:text-blue-500">Careers</a>
+      <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
+      <a href="#" class="text-gray-700 hover:text-blue-500">Contact Us</a>
+      <button
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        Get in touch
+      </button>
+    </div>
+  </nav>
+</header>
